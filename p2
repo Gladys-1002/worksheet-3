@@ -1,0 +1,42 @@
+#include <iostream>
+using namespace std;
+
+// Function to reverse the number
+int reverseNumber(int num) {
+    int rev = 0;
+    while(num > 0) {
+        rev = rev * 10 + num % 10;
+        num /= 10;
+    }
+    return rev;
+}
+
+int main() {
+    int num;
+    cout << "Enter an integer: ";
+    cin >> num;
+
+    cout << "Reversed number: " << reverseNumber(num) << endl;
+
+    return 0;
+}
+
+test cases 1:
+Enter an integer: 23455
+Reversed number: 55432
+
+test case 2:
+Enter an integer: 76453
+Reversed number: 35467
+
+test case 3: 
+Enter an integer: 9876543
+Reversed number: 3456789
+
+test case 4:
+Enter an integer: 789054321
+Reversed number: 123450987
+
+test cases 5:
+Enter an integer: 1234567890
+Reversed number: 987654321
